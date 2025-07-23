@@ -1,4 +1,16 @@
 public class FancyCalc {
+    public isPrime(int num)
+    {
+        return this.helpPrime(num, 2);
+    }
+    {
+    private helpPrime(int num,int divisor){
+        if (divisor == num)
+            return True;
+        if (num % divisor == 0)
+            return False;
+        return this.helpPrime(num, divisor+1);
+    }
     /*
     public static int pow(int base, int exponent) {
         if (exponent == 0)
@@ -9,7 +21,7 @@ public class FancyCalc {
             return pow(base, exponent - 1) * base;
         }
 
-     */
+
     public int fastPow(int base, int exponent) {
             //base case
             if (exponent == 0) return 1;
@@ -28,4 +40,6 @@ public class FancyCalc {
     }
     //Struggled with this pretty hard because I forgot the difference from static and instantiatic methods, I had to consulte with
     //chatGPT to wrap my head around why my test class was throwing errors
+
+     */
 }
