@@ -1,4 +1,21 @@
 public class FancyCalc {
+    public static int fib(int n){
+        return helpFib(n);
+    }
+    private static int helpFib(int n){
+        if (n == 1||n == 2)
+        {
+            return 1;
+        }
+        else {
+            return helpFib(n-1)+helpFib(n-2);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(fib(5));
+    }
+    /*
+}
     public int fact(n)
     {
         return this.factHelp(n, 1);
@@ -10,7 +27,7 @@ public class FancyCalc {
             else
                 return this.factHelp(n – 1, n*result);
     }
-    /*
+
 }
     public isPrime(int num)
     {
