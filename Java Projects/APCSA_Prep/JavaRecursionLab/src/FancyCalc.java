@@ -1,4 +1,17 @@
 public class FancyCalc {
+    public int fact(n)
+    {
+        return this.factHelp(n, 1);
+    }
+    {
+    private int factHelp(n, result){
+            if (n == 0)
+                return result;
+            else
+                return this.factHelp(n – 1, n*result);
+    }
+    /*
+}
     public isPrime(int num)
     {
         return this.helpPrime(num, 2);
@@ -11,7 +24,6 @@ public class FancyCalc {
             return False;
         return this.helpPrime(num, divisor+1);
     }
-    /*
     public static int pow(int base, int exponent) {
         if (exponent == 0)
         {
