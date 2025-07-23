@@ -1,5 +1,9 @@
 public class FancyCalc {
-
+    public static int gcd(int a, int b) {
+        if (b == 0) return a;
+        int remainder = a % b;
+        return gcd(b,remainder);
+    }
 
     public static int fib(int n) {
         return helpFib(n);
@@ -14,7 +18,7 @@ public class FancyCalc {
     }
 
     public static void main(String[] args) {
-        System.out.println(fib(5));
+        System.out.println(gcd(206,40));
     }
 
     public int fact(int n) {
