@@ -6,6 +6,6 @@ public class Chicken extends Animal{
         super("Gallus Gallus domesticus",chickenType);
     }
     public void speak(){
-        System.out.println("Bawck");
+        System.out.print("bawck");
     }
 }

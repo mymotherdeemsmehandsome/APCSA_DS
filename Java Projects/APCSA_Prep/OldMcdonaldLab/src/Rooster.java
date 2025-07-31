@@ -4,6 +4,6 @@ public class Rooster extends Chicken{
     }
 
     public void speak(){
-        System.out.println("cock-a-doodle-doo");
+        System.out.print("cock-a-doodle-doo");
     }
 }

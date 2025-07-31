@@ -4,6 +4,6 @@ public class Chick extends Chicken{
     }
 
     public void speak(){
-        System.out.println("peep");
+        System.out.print("peep");
     }
 }

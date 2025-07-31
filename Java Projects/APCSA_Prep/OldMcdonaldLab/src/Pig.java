@@ -4,6 +4,6 @@ public class Pig extends Animal{
     }
 
     public void speak(){
-        System.out.println("oink");
+        System.out.print("oink");
     }
 }
