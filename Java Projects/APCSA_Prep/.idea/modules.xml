@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APCSA_Prep.iml" filepath="$PROJECT_DIR$/APCSA_Prep.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaRecursionLab/JavaRecursionLab.iml" filepath="$PROJECT_DIR$/JavaRecursionLab/JavaRecursionLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListLab/ListLab.iml" filepath="$PROJECT_DIR$/ListLab/ListLab.iml" />
       <module fileurl="file://$PROJECT_DIR$/OldMcdonaldLab/OldMcdonaldLab.iml" filepath="$PROJECT_DIR$/OldMcdonaldLab/OldMcdonaldLab.iml" />
     </modules>
   </component>

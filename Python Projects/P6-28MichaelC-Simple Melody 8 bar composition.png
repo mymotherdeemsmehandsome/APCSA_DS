@@ -1,0 +1,43 @@
+import pandas as pd
+
+# Comprehensive list of area codes within 200 miles of Yosemite National Park
+nearby_area_codes = [
+    # California
+    '209', '530', '707', '916', '650', '408', '831', '510', '925', '559',
+    '805', '661', '760', '442', '628', '415', '669', '626', '323', '818',
+    '747', '213', '310', '424', '714', '949',
+    # Nevada
+    '775', '702', '725',
+    # Utah
+    '435',
+    # Oregon
+    '541', '458'
+]
+
+def filter_guest_phone_numbers(file_path, output_path):
+    """
+    Filters phone numbers from the 'Guest phone' column of a CSV file
+    based on area codes within 200 miles of Yosemite National Park (YNP).
+
+    Args:
+        file_path (str): Path to the input CSV file containing guest phone numbers.
+        output_path (str): Path to save the filtered phone numbers.
+    """
+    # Load the CSV file
+    data = pd.read_csv(file_path)
+    
+    # Extract area codes from the 'Guest phone' column
+    data['Area Code'] = data['Guest phone'].str.extract(r'\((\d{3})\)')
+    
+    # Filter phone numbers with area codes within the specified range
+    filtered_data = data[data['Area Code'].isin(nearby_area_codes)]
+    
+    # Save the filtered data to a new CSV file
+    filtered_data.to_csv(output_path, index=False)
+    print(f"Filtered guest phone numbers saved to {output_path}.")
+
+# Example usage
+input_file = '/mnt/data/2020-11-01-2025-01-11_booking_report.csv'  # Input file path
+output_file = '/mnt/data/filtered_guest_phone_numbers.csv'  # Output file path
+
+filter_guest_phone_numbers(input_file, output_file)
